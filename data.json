@@ -1,0 +1,33 @@
+{
+  "base_url": "https://github.com/fluttertemplates-dev/components",
+  "component_groups": [
+    {
+      "title": "Navigation",
+      "component_subgroups": [
+        {
+          "title": "Sidebar",
+          "components": [
+            {
+              "title": "Navigation Rail",
+              "path": "navigation_rail"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Forms",
+      "component_subgroups": [
+        {
+          "title": "Authentication",
+          "components": [
+            {
+              "title": "Simple Login Page",
+              "path": "navigation_rail"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
