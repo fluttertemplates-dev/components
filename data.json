@@ -9,21 +9,16 @@
           "components": [
             {
               "title": "Navigation Rail",
-              "path": "navigation_rail"
+              "path": "navigation/side_bar/navigation_rail"
             }
           ]
-        }
-      ]
-    },
-    {
-      "title": "Forms",
-      "component_subgroups": [
+        },
         {
-          "title": "Authentication",
+          "title": "Navbar",
           "components": [
             {
-              "title": "Simple Login Page",
-              "path": "navigation_rail"
+              "title": "Responsive Navbar",
+              "path": "navigation/nav_bar/responsive_nav_bar"
             }
           ]
         }

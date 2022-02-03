@@ -1,5 +1,7 @@
-import 'package:components/components/navigation_rail.dart';
 import 'package:flutter/material.dart';
+
+import 'components/navigation/side_bar/navigation_rail.dart';
+import 'components/navigation/nav_bar/responsive_nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +26,8 @@ class MyApp extends StatelessWidget {
 
 Map<String, Widget> _components = {
   '/': const _HomePage(),
-  '/nav-rail': const NavigationRailPage()
+  'navigation/side_bar/navigation_rail': const NavigationRailPage(),
+  'navigation/nav_bar/responsive_nav_bar': ResponsiveNavBarPage()
 };
 
 class _HomePage extends StatelessWidget {
