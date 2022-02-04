@@ -1,3 +1,5 @@
+import 'package:components/components/forms/sign_in/sign_in_page1.dart';
+import 'package:components/components/forms/sign_in/sign_in_page2.dart';
 import 'package:flutter/material.dart';
 
 import 'components/navigation/side_bar/navigation_rail.dart';
@@ -27,7 +29,9 @@ class MyApp extends StatelessWidget {
 Map<String, Widget> _components = {
   '/': const _HomePage(),
   'navigation/side_bar/navigation_rail': const NavigationRailPage(),
-  'navigation/nav_bar/responsive_nav_bar': ResponsiveNavBarPage()
+  'navigation/nav_bar/responsive_nav_bar': ResponsiveNavBarPage(),
+  'forms/sign_in/sign_in_page1': const SignInPage1(),
+  'forms/sign_in/sign_in_page2': const SignInPage2(),
 };
 
 class _HomePage extends StatelessWidget {
