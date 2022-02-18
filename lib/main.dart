@@ -2,6 +2,7 @@ import 'package:components/components/flutter_basics/animation/hero_listview.dar
 import 'package:components/components/flutter_basics/tabs/custom_tabbars.dart';
 import 'package:components/components/forms/sign_in/sign_in_page1.dart';
 import 'package:components/components/forms/sign_in/sign_in_page2.dart';
+import 'package:components/components/must_haves/profile_page/profile_page_1.dart';
 import 'package:components/components/navigation/bottom_nav/simple_bottom.dart';
 import 'package:flutter/material.dart';
 
@@ -30,15 +31,50 @@ class MyApp extends StatelessWidget {
 
 Map<String, Widget> _components = {
   '/': const _HomePage(),
-  'navigation/side_bar/navigation_rail': const NavigationRailPage(),
-  'navigation/nav_bar/responsive_nav_bar': ResponsiveNavBarPage(),
-  'navigation/bottom_nav/persistent_bottom_nav': PersistentBottomNavPage(),
-  'navigation/bottom_nav/simple_bottom_nav': const SimpleBottomNavigation(),
-  'forms/sign_in/sign_in_page1': const SignInPage1(),
-  'forms/sign_in/sign_in_page2': const SignInPage2(),
-  'basics/animation/hero_list': const HeroListPage(),
-  'basics/tabs/custom_tab_bars': const CustomTabBarsPage(),
-  'basics/sliders/custom_sliders': const CustomSlidersPage(),
+
+  /// Navigation ----
+
+  /// Sidebar
+  'navigation_rail': const NavigationRailPage(),
+
+  /// NavBar
+  'responsive_nav_bar': ResponsiveNavBarPage(),
+
+  /// BottomNav
+  'persistent_bottom_nav': PersistentBottomNavPage(),
+  'simple_bottom_nav': const SimpleBottomNavigation(),
+
+  /// ----
+
+  /// Forms ----
+
+  /// SignIn
+  'sign_in_page1': const SignInPage1(),
+  'sign_in_page2': const SignInPage2(),
+
+  /// ----
+
+  /// Flutter Basics ----
+
+  /// Animation
+  'hero_list': const HeroListPage(),
+
+  /// Sliders
+  'custom_sliders': const CustomSlidersPage(),
+
+  /// Tabs
+  'custom_tab_bars': const CustomTabBarsPage(),
+
+  /// ----
+
+  /// Must Haves ----
+
+  /// Profile Page
+  'profile_page': const ProfilePage1(),
+
+  /// Settings Page
+
+  /// ----
 };
 
 class _HomePage extends StatelessWidget {
