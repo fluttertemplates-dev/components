@@ -153,14 +153,15 @@ class _TopPortion extends StatelessWidget {
                 Positioned(
                   bottom: 0,
                   right: 0,
-                  child: Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        shape: BoxShape.circle,
-                        border: Border.all(color: Colors.white, width: 8),
-                      )),
+                  child: CircleAvatar(
+                    radius: 20,
+                    backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                    child: Container(
+                      margin: const EdgeInsets.all(8.0),
+                      decoration: const BoxDecoration(
+                          color: Colors.green, shape: BoxShape.circle),
+                    ),
+                  ),
                 ),
               ],
             ),
