@@ -2,6 +2,7 @@ import 'package:components/components/flutter_basics/animation/hero_listview.dar
 import 'package:components/components/flutter_basics/tabs/custom_tabbars.dart';
 import 'package:components/components/forms/sign_in/sign_in_page1.dart';
 import 'package:components/components/forms/sign_in/sign_in_page2.dart';
+import 'package:components/components/must_haves/content_feed/news_feed_1.dart';
 import 'package:components/components/must_haves/profile_page/profile_page_1.dart';
 import 'package:components/components/navigation/bottom_nav/material3_bottom.dart';
 import 'package:components/components/navigation/bottom_nav/simple_bottom.dart';
@@ -74,6 +75,9 @@ Map<String, Widget> _components = {
   /// Profile Page
   'profile_page': const ProfilePage1(),
 
+  /// Content Feed
+  'news_feed_1': const NewsFeedPage1(),
+
   /// Settings Page
 
   /// ----
@@ -92,8 +96,9 @@ class _HomePage extends StatelessWidget {
         width: double.infinity,
         child: Center(
           child: Container(
-            constraints: const BoxConstraints(maxWidth: 200),
-            child: ListView.builder(
+            constraints: const BoxConstraints(maxWidth: 500),
+            child: ListView.separated(
+              separatorBuilder: (context, index) => const Divider(),
               itemCount: _components.length,
               itemBuilder: (BuildContext context, int index) {
                 final String routeName = _components.keys.elementAt(index);
