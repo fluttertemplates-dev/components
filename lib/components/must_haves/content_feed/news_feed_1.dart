@@ -7,11 +7,9 @@ class NewsFeedPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text('News Feed 1'), automaticallyImplyLeading: false),
       body: Center(
         child: Container(
-          constraints: const BoxConstraints(maxWidth: 600),
+          constraints: const BoxConstraints(maxWidth: 400),
           child: ListView.separated(
             itemCount: _feedItems.length,
             separatorBuilder: (BuildContext context, int index) {
@@ -180,22 +178,22 @@ final List<User> _users = [
   User(
     "John Doe",
     "john_doe",
-    "https://i.pravatar.cc/60?img=0",
+    "https://picsum.photos/id/1062/80/80",
   ),
   User(
     "Jane Doe",
     "jane_doe",
-    "https://i.pravatar.cc/60?img=1",
+    "https://picsum.photos/id/1066/80/80",
   ),
   User(
     "Jack Doe",
     "jack_doe",
-    "https://i.pravatar.cc/60?img=2",
+    "https://picsum.photos/id/1072/80/80",
   ),
   User(
     "Jill Doe",
     "jill_doe",
-    "https://i.pravatar.cc/60?img=3",
+    "https://picsum.photos/id/133/80/80",
   )
 ];
 

@@ -4,11 +4,14 @@ import 'package:components/components/forms/sign_in/sign_in_page1.dart';
 import 'package:components/components/forms/sign_in/sign_in_page2.dart';
 import 'package:components/components/must_haves/content_feed/news_feed_1.dart';
 import 'package:components/components/must_haves/profile_page/profile_page_1.dart';
+import 'package:components/components/must_haves/settings_page/settings_page_1.dart';
 import 'package:components/components/navigation/bottom_nav/material3_bottom.dart';
 import 'package:components/components/navigation/bottom_nav/simple_bottom.dart';
 import 'package:flutter/material.dart';
 
 import 'components/flutter_basics/sliders/custom_sliders.dart';
+import 'components/must_haves/content_feed/news_feed_2.dart';
+import 'components/must_haves/settings_page/settings_page_2.dart';
 import 'components/navigation/bottom_nav/persistent_bottom.dart';
 import 'components/navigation/side_bar/navigation_rail.dart';
 import 'components/navigation/nav_bar/responsive_nav_bar.dart';
@@ -77,8 +80,11 @@ Map<String, Widget> _components = {
 
   /// Content Feed
   'news_feed_1': const NewsFeedPage1(),
+  'news_feed_2': const NewsFeedPage2(),
 
   /// Settings Page
+  'settings_page_1': const SettingsPage1(),
+  'settings_page_2': const SettingsPage2(),
 
   /// ----
 };
