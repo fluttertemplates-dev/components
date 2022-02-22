@@ -3,10 +3,12 @@ import 'package:components/components/flutter_basics/tabs/custom_tabbars.dart';
 import 'package:components/components/forms/sign_in/sign_in_page1.dart';
 import 'package:components/components/forms/sign_in/sign_in_page2.dart';
 import 'package:components/components/must_haves/content_feed/news_feed_1.dart';
+import 'package:components/components/must_haves/onboarding_page/onboarding_page_1.dart';
 import 'package:components/components/must_haves/profile_page/profile_page_1.dart';
 import 'package:components/components/must_haves/settings_page/settings_page_1.dart';
 import 'package:components/components/navigation/bottom_nav/material3_bottom.dart';
 import 'package:components/components/navigation/bottom_nav/simple_bottom.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'components/flutter_basics/sliders/custom_sliders.dart';
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      scrollBehavior: MyCustomScrollBehavior(),
       debugShowCheckedModeBanner: false,
       routes:
           _components.map((key, value) => MapEntry(key, (context) => value)),
@@ -86,6 +89,9 @@ Map<String, Widget> _components = {
   'settings_page_1': const SettingsPage1(),
   'settings_page_2': const SettingsPage2(),
 
+  /// Onboarding
+  'onboarding_page_1': const OnboardingPage1(),
+
   /// ----
 };
 
@@ -120,4 +126,13 @@ class _HomePage extends StatelessWidget {
       ),
     );
   }
+}
+
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  // Override behavior methods and getters like dragDevices
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }
