@@ -3,6 +3,8 @@ import 'package:components/components/flutter_basics/tabs/custom_tabbars.dart';
 import 'package:components/components/forms/sign_in/sign_in_page1.dart';
 import 'package:components/components/forms/sign_in/sign_in_page2.dart';
 import 'package:components/components/must_haves/content_feed/news_feed_1.dart';
+import 'package:components/components/must_haves/dropdowns/auto_complete_dropdown.dart';
+import 'package:components/components/must_haves/dropdowns/simple_drop_down.dart';
 import 'package:components/components/must_haves/onboarding_page/onboarding_page_1.dart';
 import 'package:components/components/must_haves/profile_page/profile_page_1.dart';
 import 'package:components/components/must_haves/settings_page/settings_page_1.dart';
@@ -91,6 +93,10 @@ Map<String, Widget> _components = {
 
   /// Onboarding
   'onboarding_page_1': const OnboardingPage1(),
+
+  /// Dropdowns
+  'simple_drop_down': const SimpleDropDown(),
+  'auto_complete_drop_down': const AutocompleteDropDown(),
 
   /// ----
 };
