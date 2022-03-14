@@ -22,7 +22,6 @@ class _SimpleDropDownState extends State<SimpleDropDown> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Simple Dropdown')),
       body: Center(
         child: Container(
           width: 300,

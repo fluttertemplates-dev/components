@@ -13,7 +13,6 @@ class _SimpleDropDownState extends State<AutocompleteDropDown> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Autocomplete Dropdown')),
       body: Form(
         key: _formKey,
         child: Center(

@@ -13,9 +13,7 @@ class _Material3BottomNavState extends State<Material3BottomNav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text('Material3 Bottom Navbar'),
-          automaticallyImplyLeading: false),
+      appBar: AppBar(title: const Text('Material3 Bottom Navbar')),
       body: Center(
           child: Text("Selected Page: ${_navBarItems[_selectedIndex].label}")),
       bottomNavigationBar: NavigationBar(

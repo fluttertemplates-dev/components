@@ -16,7 +16,6 @@ class ResponsiveNavBarPage extends StatelessWidget {
         key: _scaffoldKey,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
-          automaticallyImplyLeading: false,
           elevation: 0,
           titleSpacing: 0,
           leading: _isLargeScreen

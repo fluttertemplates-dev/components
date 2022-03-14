@@ -16,7 +16,6 @@ class _SettingsPage2State extends State<SettingsPage2> {
       data: _isDark ? ThemeData.dark() : ThemeData.light(),
       child: Scaffold(
         appBar: AppBar(
-          automaticallyImplyLeading: false,
           title: const Text("Settings"),
         ),
         body: Center(

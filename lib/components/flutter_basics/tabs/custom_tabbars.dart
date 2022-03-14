@@ -41,10 +41,8 @@ class _CustomTabBarsPageState extends State<CustomTabBarsPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: _selectedColor,
-        title: const Text("Custom Tab Bars"),
-        automaticallyImplyLeading: false,
-      ),
+          backgroundColor: _selectedColor,
+          title: const Text("Custom Tab Bars")),
       body: Center(
         child: Container(
           padding: const EdgeInsets.all(8.0),

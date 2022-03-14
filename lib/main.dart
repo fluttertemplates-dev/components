@@ -1,4 +1,6 @@
 import 'package:components/components/flutter_basics/animation/hero_listview.dart';
+import 'package:components/components/flutter_basics/appbars/collapsing_app_bar.dart';
+import 'package:components/components/flutter_basics/appbars/search_app_bar.dart';
 import 'package:components/components/flutter_basics/tabs/custom_tabbars.dart';
 import 'package:components/components/forms/sign_in/sign_in_page1.dart';
 import 'package:components/components/forms/sign_in/sign_in_page2.dart';
@@ -13,6 +15,7 @@ import 'package:components/components/navigation/bottom_nav/simple_bottom.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import 'components/flutter_basics/appbars/collapsing_app_bar_with_tabs.dart';
 import 'components/flutter_basics/sliders/custom_sliders.dart';
 import 'components/must_haves/content_feed/news_feed_2.dart';
 import 'components/must_haves/settings_page/settings_page_2.dart';
@@ -75,6 +78,11 @@ Map<String, Widget> _components = {
 
   /// Tabs
   'custom_tab_bars': const CustomTabBarsPage(),
+
+  /// Appbars
+  'search_app_bar': const SearchAppbarPage(),
+  'collapsing_app_bar': const CollapsingAppbarPage(),
+  'collapsing_app_bar_with_tabs': const CollapsingAppbarWithTabsPage(),
 
   /// ----
 

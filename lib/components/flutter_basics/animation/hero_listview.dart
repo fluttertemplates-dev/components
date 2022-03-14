@@ -6,8 +6,7 @@ class HeroListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text("Hero ListView"), automaticallyImplyLeading: false),
+      appBar: AppBar(title: const Text("Hero ListView")),
       body: Center(
         child: Container(
           constraints: const BoxConstraints(maxWidth: 500),

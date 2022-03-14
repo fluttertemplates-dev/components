@@ -7,8 +7,7 @@ class CustomSlidersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text('Sliders'), automaticallyImplyLeading: false),
+      appBar: AppBar(title: const Text('Sliders')),
       body: Center(
         child: Container(
           constraints: const BoxConstraints(maxWidth: 400),
