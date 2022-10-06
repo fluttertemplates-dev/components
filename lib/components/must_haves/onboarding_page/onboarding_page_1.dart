@@ -151,7 +151,7 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                     TextButton(
                         style: TextButton.styleFrom(
                             visualDensity: VisualDensity.comfortable,
-                            primary: Colors.white,
+                            foregroundColor: Colors.white,
                             textStyle: const TextStyle(
                                 fontSize: 16, fontWeight: FontWeight.bold)),
                         onPressed: () {
@@ -161,7 +161,7 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                     TextButton(
                       style: TextButton.styleFrom(
                           visualDensity: VisualDensity.comfortable,
-                          primary: Colors.white,
+                          foregroundColor: Colors.white,
                           textStyle: const TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold)),
                       onPressed: () {

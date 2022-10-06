@@ -38,12 +38,10 @@ class ResponsiveNavBarPage extends StatelessWidget {
               ],
             ),
           ),
-          actions: [
+          actions: const [
             Padding(
-              padding: const EdgeInsets.only(right: 16.0),
-              child: CircleAvatar(
-                  child: IconButton(
-                      onPressed: () {}, icon: const Icon(Icons.person))),
+              padding: EdgeInsets.only(right: 16.0),
+              child: CircleAvatar(child: _ProfileIcon()),
             )
           ],
         ),
@@ -97,3 +95,31 @@ final List<String> _menuItems = <String>[
   'Settings',
   'Sign Out',
 ];
+
+enum Menu { itemOne, itemTwo, itemThree }
+
+class _ProfileIcon extends StatelessWidget {
+  const _ProfileIcon({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<Menu>(
+        icon: const Icon(Icons.person),
+        offset: const Offset(0, 40),
+        onSelected: (Menu item) {},
+        itemBuilder: (BuildContext context) => <PopupMenuEntry<Menu>>[
+              const PopupMenuItem<Menu>(
+                value: Menu.itemOne,
+                child: Text('Account'),
+              ),
+              const PopupMenuItem<Menu>(
+                value: Menu.itemTwo,
+                child: Text('Settings'),
+              ),
+              const PopupMenuItem<Menu>(
+                value: Menu.itemThree,
+                child: Text('Sign Out'),
+              ),
+            ]);
+  }
+}
