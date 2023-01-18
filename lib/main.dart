@@ -10,6 +10,7 @@ import 'package:components/components/must_haves/dropdowns/simple_drop_down.dart
 import 'package:components/components/must_haves/onboarding_page/onboarding_page_1.dart';
 import 'package:components/components/must_haves/profile_page/profile_page_1.dart';
 import 'package:components/components/must_haves/settings_page/settings_page_1.dart';
+import 'package:components/components/navigation/bottom_nav/google_bottom_bar.dart';
 import 'package:components/components/navigation/bottom_nav/material3_bottom.dart';
 import 'package:components/components/navigation/bottom_nav/simple_bottom.dart';
 import 'package:flutter/gestures.dart';
@@ -57,6 +58,7 @@ Map<String, Widget> _components = {
   'persistent_bottom_nav': PersistentBottomNavPage(),
   'simple_bottom_nav': const SimpleBottomNavigation(),
   'material3_bottom_nav': const Material3BottomNav(),
+  'google_bottom_bar': const GoogleBottomBar(),
 
   /// ----
 
