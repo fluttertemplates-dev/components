@@ -30,12 +30,12 @@ class _NavigationRailPageState extends State<NavigationRailPage> {
 
   @override
   Widget build(BuildContext context) {
-    final _width = MediaQuery.of(context).size.width;
-    final bool _isSmallScreen = _width < 600;
-    final bool _isLargeScreen = _width > 800;
+    final width = MediaQuery.of(context).size.width;
+    final bool isSmallScreen = width < 600;
+    final bool isLargeScreen = width > 800;
 
     return Scaffold(
-      bottomNavigationBar: _isSmallScreen
+      bottomNavigationBar: isSmallScreen
           ? BottomNavigationBar(
               items: _navBarItems,
               currentIndex: _selectedIndex,
@@ -47,7 +47,7 @@ class _NavigationRailPageState extends State<NavigationRailPage> {
           : null,
       body: Row(
         children: <Widget>[
-          if (!_isSmallScreen)
+          if (!isSmallScreen)
             NavigationRail(
               selectedIndex: _selectedIndex,
               onDestinationSelected: (int index) {
@@ -55,7 +55,7 @@ class _NavigationRailPageState extends State<NavigationRailPage> {
                   _selectedIndex = index;
                 });
               },
-              extended: _isLargeScreen,
+              extended: isLargeScreen,
               destinations: _navBarItems
                   .map((item) => NavigationRailDestination(
                       icon: item.icon,

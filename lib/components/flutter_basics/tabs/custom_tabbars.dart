@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomTabBarsPage extends StatefulWidget {
-  const CustomTabBarsPage({Key? key}) : super(key: key);
+  const CustomTabBarsPage({super.key});
 
   @override
-  _CustomTabBarsPageState createState() => _CustomTabBarsPageState();
+  State<CustomTabBarsPage> createState() => _CustomTabBarsPageState();
 }
 
 class _CustomTabBarsPageState extends State<CustomTabBarsPage>
@@ -170,7 +170,7 @@ class MaterialDesignIndicator extends Decoration {
   });
 
   @override
-  _MaterialDesignPainter createBoxPainter([VoidCallback? onChanged]) {
+  createBoxPainter([VoidCallback? onChanged]) {
     return _MaterialDesignPainter(this, onChanged);
   }
 }

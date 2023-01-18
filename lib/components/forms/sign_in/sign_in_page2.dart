@@ -5,11 +5,11 @@ class SignInPage2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool _isSmallScreen = MediaQuery.of(context).size.width < 600;
+    final bool isSmallScreen = MediaQuery.of(context).size.width < 600;
 
     return Scaffold(
         body: Center(
-            child: _isSmallScreen
+            child: isSmallScreen
                 ? Column(
                     mainAxisSize: MainAxisSize.min,
                     children: const [
@@ -37,18 +37,18 @@ class _Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool _isSmallScreen = MediaQuery.of(context).size.width < 600;
+    final bool isSmallScreen = MediaQuery.of(context).size.width < 600;
 
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        FlutterLogo(size: _isSmallScreen ? 100 : 200),
+        FlutterLogo(size: isSmallScreen ? 100 : 200),
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
             "Welcome to Flutter!",
             textAlign: TextAlign.center,
-            style: _isSmallScreen
+            style: isSmallScreen
                 ? Theme.of(context).textTheme.headline5
                 : Theme.of(context)
                     .textTheme
@@ -91,10 +91,10 @@ class __FormContentState extends State<_FormContent> {
                   return 'Please enter some text';
                 }
 
-                bool _emailValid = RegExp(
+                bool emailValid = RegExp(
                         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                     .hasMatch(value);
-                if (!_emailValid) {
+                if (!emailValid) {
                   return 'Please enter a valid email';
                 }
 

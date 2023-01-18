@@ -7,8 +7,8 @@ class ResponsiveNavBarPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _width = MediaQuery.of(context).size.width;
-    final bool _isLargeScreen = _width > 800;
+    final width = MediaQuery.of(context).size.width;
+    final bool isLargeScreen = width > 800;
 
     return Theme(
       data: ThemeData.dark(),
@@ -18,7 +18,7 @@ class ResponsiveNavBarPage extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           titleSpacing: 0,
-          leading: _isLargeScreen
+          leading: isLargeScreen
               ? null
               : IconButton(
                   icon: const Icon(Icons.menu),
@@ -34,7 +34,7 @@ class ResponsiveNavBarPage extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.green, fontWeight: FontWeight.bold),
                 ),
-                if (_isLargeScreen) Expanded(child: _navBarItems())
+                if (isLargeScreen) Expanded(child: _navBarItems())
               ],
             ),
           ),
@@ -45,7 +45,7 @@ class ResponsiveNavBarPage extends StatelessWidget {
             )
           ],
         ),
-        drawer: _isLargeScreen ? null : _drawer(),
+        drawer: isLargeScreen ? null : _drawer(),
         body: const Center(
           child: Text(
             "Body",

@@ -16,14 +16,14 @@ class NewsFeedPage1 extends StatelessWidget {
               return const Divider();
             },
             itemBuilder: (BuildContext context, int index) {
-              final _item = _feedItems[index];
+              final item = _feedItems[index];
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _AvatarImage(_item.user.imageUrl),
+                    _AvatarImage(item.user.imageUrl),
                     const SizedBox(width: 16),
                     Expanded(
                       child: Column(
@@ -38,14 +38,14 @@ class NewsFeedPage1 extends StatelessWidget {
                                 overflow: TextOverflow.ellipsis,
                                 text: TextSpan(children: [
                                   TextSpan(
-                                    text: _item.user.fullName,
+                                    text: item.user.fullName,
                                     style: const TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16,
                                         color: Colors.black),
                                   ),
                                   TextSpan(
-                                    text: " @${_item.user.userName}",
+                                    text: " @${item.user.userName}",
                                     style:
                                         Theme.of(context).textTheme.subtitle1,
                                   ),
@@ -59,8 +59,8 @@ class NewsFeedPage1 extends StatelessWidget {
                               )
                             ],
                           ),
-                          if (_item.content != null) Text(_item.content!),
-                          if (_item.imageUrl != null)
+                          if (item.content != null) Text(item.content!),
+                          if (item.imageUrl != null)
                             Container(
                               height: 200,
                               margin: const EdgeInsets.only(top: 8.0),
@@ -68,10 +68,10 @@ class NewsFeedPage1 extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(8.0),
                                   image: DecorationImage(
                                     fit: BoxFit.cover,
-                                    image: NetworkImage(_item.imageUrl!),
+                                    image: NetworkImage(item.imageUrl!),
                                   )),
                             ),
-                          _ActionsRow(item: _item)
+                          _ActionsRow(item: item)
                         ],
                       ),
                     ),

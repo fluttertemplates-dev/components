@@ -201,7 +201,7 @@ class PersistentBottomBarScaffold extends StatefulWidget {
       : super(key: key);
 
   @override
-  _PersistentBottomBarScaffoldState createState() =>
+  State<PersistentBottomBarScaffold> createState() =>
       _PersistentBottomBarScaffoldState();
 }
 

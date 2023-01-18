@@ -92,10 +92,10 @@ class __SimpleSliderState extends State<_SimpleSlider> {
 }
 
 class IosSlider extends StatefulWidget {
-  const IosSlider({Key? key}) : super(key: key);
+  const IosSlider({super.key});
 
   @override
-  _IosSliderState createState() => _IosSliderState();
+  State<IosSlider> createState() => _IosSliderState();
 }
 
 class _IosSliderState extends State<IosSlider> {

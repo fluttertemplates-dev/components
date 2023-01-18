@@ -47,7 +47,7 @@ class OnboardingPagePresenter extends StatefulWidget {
       : super(key: key);
 
   @override
-  _OnboardingPageState createState() => _OnboardingPageState();
+  State<OnboardingPagePresenter> createState() => _OnboardingPageState();
 }
 
 class _OnboardingPageState extends State<OnboardingPagePresenter> {
@@ -77,7 +77,7 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                     });
                   },
                   itemBuilder: (context, idx) {
-                    final _item = widget.pages[idx];
+                    final item = widget.pages[idx];
                     return Column(
                       children: [
                         Expanded(
@@ -85,7 +85,7 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                           child: Padding(
                             padding: const EdgeInsets.all(32.0),
                             child: Image.network(
-                              _item.imageUrl,
+                              item.imageUrl,
                             ),
                           ),
                         ),
@@ -94,13 +94,13 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                             child: Column(children: [
                               Padding(
                                 padding: const EdgeInsets.all(16.0),
-                                child: Text(_item.title,
+                                child: Text(item.title,
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline6
                                         ?.copyWith(
                                           fontWeight: FontWeight.bold,
-                                          color: _item.textColor,
+                                          color: item.textColor,
                                         )),
                               ),
                               Container(
@@ -108,13 +108,13 @@ class _OnboardingPageState extends State<OnboardingPagePresenter> {
                                     const BoxConstraints(maxWidth: 280),
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 24.0, vertical: 8.0),
-                                child: Text(_item.description,
+                                child: Text(item.description,
                                     textAlign: TextAlign.center,
                                     style: Theme.of(context)
                                         .textTheme
                                         .bodyText2
                                         ?.copyWith(
-                                          color: _item.textColor,
+                                          color: item.textColor,
                                         )),
                               )
                             ]))

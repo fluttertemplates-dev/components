@@ -48,12 +48,12 @@ class _SimpleDropDownState extends State<AutocompleteDropDown> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                     onPressed: () {
-                      String _message = 'Form invalid';
+                      String message = 'Form invalid';
                       if (_formKey.currentState?.validate() ?? false) {
-                        _message = 'Form valid';
+                        message = 'Form valid';
                       }
                       ScaffoldMessenger.of(context)
-                          .showSnackBar(SnackBar(content: Text(_message)));
+                          .showSnackBar(SnackBar(content: Text(message)));
                     },
                     child: const Text("Continue"))
               ],
@@ -79,7 +79,7 @@ class AutocompleteTextField extends StatefulWidget {
       : super(key: key);
 
   @override
-  _AutocompleteTextFieldState createState() => _AutocompleteTextFieldState();
+  State<AutocompleteTextField> createState() => _AutocompleteTextFieldState();
 }
 
 class _AutocompleteTextFieldState extends State<AutocompleteTextField> {
@@ -149,13 +149,13 @@ class _AutocompleteTextFieldState extends State<AutocompleteTextField> {
                     child: ListView.builder(
                       itemCount: _filteredItems.length,
                       itemBuilder: (BuildContext context, int index) {
-                        final _item = _filteredItems[index];
+                        final item = _filteredItems[index];
                         return ListTile(
-                          title: Text(_item),
+                          title: Text(item),
                           onTap: () {
-                            _controller.text = _item;
+                            _controller.text = item;
                             _focusNode.unfocus();
-                            widget.onItemSelect(_item);
+                            widget.onItemSelect(item);
                           },
                         );
                       },

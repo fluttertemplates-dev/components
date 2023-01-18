@@ -54,10 +54,10 @@ class _SignInPage1State extends State<SignInPage1> {
                           return 'Please enter some text';
                         }
 
-                        bool _emailValid = RegExp(
+                        bool emailValid = RegExp(
                                 r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                             .hasMatch(value);
-                        if (!_emailValid) {
+                        if (!emailValid) {
                           return 'Please enter a valid email';
                         }
 

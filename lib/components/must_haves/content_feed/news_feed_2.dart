@@ -12,7 +12,7 @@ class NewsFeedPage2 extends StatelessWidget {
           child: ListView.builder(
             itemCount: _articles.length,
             itemBuilder: (BuildContext context, int index) {
-              final _item = _articles[index];
+              final item = _articles[index];
               return Container(
                 height: 136,
                 margin:
@@ -29,13 +29,13 @@ class NewsFeedPage2 extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          _item.title,
+                          item.title,
                           style: const TextStyle(fontWeight: FontWeight.bold),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                         ),
                         const SizedBox(height: 8),
-                        Text("${_item.author} · ${_item.postedOn}",
+                        Text("${item.author} · ${item.postedOn}",
                             style: Theme.of(context).textTheme.caption),
                         const SizedBox(height: 8),
                         Row(
@@ -64,7 +64,7 @@ class NewsFeedPage2 extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8.0),
                             image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage(_item.imageUrl),
+                              image: NetworkImage(item.imageUrl),
                             ))),
                   ],
                 ),
