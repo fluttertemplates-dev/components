@@ -36,6 +36,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.16.0"
+  concentric_transition:
+    dependency: "direct main"
+    description:
+      name: concentric_transition
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   cupertino_icons:
     dependency: "direct main"
     description:

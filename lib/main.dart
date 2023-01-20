@@ -19,6 +19,7 @@ import 'package:flutter/material.dart';
 import 'components/flutter_basics/appbars/collapsing_app_bar_with_tabs.dart';
 import 'components/flutter_basics/sliders/custom_sliders.dart';
 import 'components/must_haves/content_feed/news_feed_2.dart';
+import 'components/must_haves/onboarding_page/concentric_animation_onboarding.dart';
 import 'components/must_haves/settings_page/settings_page_2.dart';
 import 'components/navigation/bottom_nav/persistent_bottom.dart';
 import 'components/navigation/side_bar/navigation_rail.dart';
@@ -103,6 +104,7 @@ Map<String, Widget> _components = {
 
   /// Onboarding
   'onboarding_page_1': const OnboardingPage1(),
+  'concentric_animation_onboarding': const ConcentricAnimationOnboarding(),
 
   /// Dropdowns
   'simple_drop_down': const SimpleDropDown(),
